@@ -8,8 +8,22 @@ const {
 
 const {
   duration,
-  formatTitle,
 } = require('./lib/utils');
+
+function formatTitle(status, title) {
+  switch (status) {
+    case 'passed':
+      return `${green('✓')} ${gray(title)}`;
+    case 'pending':
+      return `${cyan('-')} ${cyan(title)}`;
+    case 'failed':
+      return `${red('✖')} ${red(title)}`;
+    default:
+      return gray(title);
+  }
+};
+
+
 
 const { log } = console;
 

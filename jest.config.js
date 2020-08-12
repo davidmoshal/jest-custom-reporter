@@ -13,6 +13,16 @@ module.exports = {
   ],
   reporters: [
     'default',
-    ['<rootDir>/index', { command_handler }]
+    ['<rootDir>/index', {
+      command_handler
+    }],
+    ["./node_modules/jest-html-reporter", {
+      pageTitle: "Test Report"
+    }],
+    // ["jest-html-reporters", {
+    //   "publicPath": "./html-report",
+    //   "filename": "report.html",
+    //   "expand": true
+    //}]
   ],
 };
