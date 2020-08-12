@@ -1,0 +1,60 @@
+{
+  "name": "jest-custom-reporter",
+  "version": "1.0.4",
+  "description": "Custom reporter for Jest",
+  "main": "index.js",
+  "scripts": {
+    "bump": "yarn version && npm publish",
+    "cm": "git-cz",
+    "lint": "eslint '**/*.js'",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "precommit": "npm run lint",
+    "prepush": "npm test",
+    "release": "semantic-release && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sojungko/jest-custom-reporter.git"
+  },
+  "keywords": [
+    "jest",
+    "reporter",
+    "test",
+    "tdd"
+  ],
+  "author": "Sojung Park",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sojungko/jest-custom-reporter/issues"
+  },
+  "homepage": "https://github.com/sojungko/jest-custom-reporter#readme",
+  "devDependencies": {
+    "@jest/reporters": "^26.3.0",
+    "@jest/test-result": "^26.3.0",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^0.14.3",
+    "jest": "^22.4.3",
+    "jest-html-reporter": "^3.1.3",
+    "jest-json-reporter": "^1.2.2",
+    "semantic-release": "^15.1.5"
+  },
+  "dependencies": {
+    "chalk": "^2.3.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
